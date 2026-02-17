@@ -13,7 +13,7 @@ namespace StackQueue6.Queue
         public T Dequeue()
         {
             //T firstInLine = elements.First();
-            if (elements.First != null)
+            if (elements.First != null) //man kan kun tjekke på en linkedList er hvis man tjekker den første´eller sidste element
             {
                 T firstInLine = elements.First();
                 elements.RemoveFirst();
