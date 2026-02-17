@@ -1,5 +1,4 @@
-﻿
-namespace StackQueue6
+﻿namespace StackQueue6.Stack
 {
     [Serializable]
     internal class MyStackIsFullException : Exception

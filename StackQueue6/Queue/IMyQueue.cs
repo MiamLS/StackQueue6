@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueue6
+namespace StackQueue6.Queue
 {
-    public interface IMyStack<T>
+    public interface IMyQueue<T>
     {
-        void Push(T element);
-        T Pop();
-        T Peek();
+        void Enqueue(T item);
+        T Dequeue();
     }
 }

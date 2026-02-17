@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueue6
+namespace StackQueue6.Stack
 {
     public class MyStackLinkedList<T> : IMyStack<T>
     {
-        LinkedList<T> elements = new LinkedList<T>();
+        private LinkedList<T> elements = new LinkedList<T>();
 
-        public MyStackLinkedList()
+        private int _size;
+
+        public MyStackLinkedList(int size)
         {
+            _size = size;
             //if (elements.Count > 3)
-            //    throw new MyStackIsFullException("Listen er fuld");
+            //    throw new MyStackIsFullException("Listen er fuld"); 
         }
 
         public T Peek()
@@ -31,12 +34,12 @@ namespace StackQueue6
 
         public void Push(T element)
         {
-            elements.AddLast(element);
-
-            if (elements.Count > 3)
+            if (elements.Count >= _size)
             {
                 throw new MyStackIsFullException("Listen er fuld");
             }
+            elements.AddLast(element);
+
         }
     }
 }

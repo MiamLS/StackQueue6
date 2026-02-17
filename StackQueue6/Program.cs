@@ -1,9 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using StackQueue6;
+using StackQueue6.Queue;
+using StackQueue6.Stack;
 
 Console.WriteLine("Hello, World!");
 
-MyStackLinkedList<Person> persons = new MyStackLinkedList<Person>();
+MyStackLinkedList<Person> persons = new MyStackLinkedList<Person>(3);
 
 Person p1 = new Person(1, "bob", 20);
 Person p2 = new Person(2, "Kevin", 20);
@@ -27,3 +29,14 @@ catch (MyStackIsFullException mexp)
 {
     Console.WriteLine(mexp.Message);
 }
+
+MyQueueLinkedList<Person> people = new MyQueueLinkedList<Person>();
+
+people.Enqueue(p1);
+people.Enqueue(p2);
+people.Enqueue(p3);
+
+people.Dequeue();
+people.Dequeue();
+people.Dequeue();
+people.Dequeue();
