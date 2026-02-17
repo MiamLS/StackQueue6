@@ -39,4 +39,11 @@ people.Enqueue(p3);
 people.Dequeue();
 people.Dequeue();
 people.Dequeue();
-people.Dequeue();
+try
+{
+    people.Dequeue();
+}
+catch(MyQueueIsEmptyException ex)
+{
+    Console.WriteLine(ex.Message);
+}

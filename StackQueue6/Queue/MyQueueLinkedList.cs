@@ -13,7 +13,7 @@ namespace StackQueue6.Queue
         public T Dequeue()
         {
             //T firstInLine = elements.First();
-            if (elements.Count != null)
+            if (elements.First != null)
             {
                 T firstInLine = elements.First();
                 elements.RemoveFirst();
